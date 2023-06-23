@@ -3,7 +3,7 @@ Description=Service to run flask application
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 app.py
+ExecStart=/usr/local/bin/gunicorn -w 3 -b 0.0.0.0:5000 app:app
 WorkingDirectory=/var/flaskapp/
 User=flaskapp
 Group=flaskapp
