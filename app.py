@@ -6,4 +6,4 @@ def hello():
   return "<h1><center> Hello World app! This is a flask application running from systemd<center><h1>"
 
 if __name__ == "__main__":
-  app.run(host='0.0.0.0',port=5000)
+  app.run()
