@@ -1,0 +1,13 @@
+[Unit]
+Description=Service to run flask application
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 app.py
+WorkingDirectory=/var/flaskapp/
+User=flaskapp
+Group=flaskapp
+TimeoutStopSec=infinity
+
+[Install]
+WantedBy=multi-user.target
